@@ -57,7 +57,7 @@ def send_blast(email_list, subject, template, count):
                 print(e.args)
 
 
-_email_list = ["bibi@kidocode.com"]
+_email_list = ["nasrin@kidocode.com"]
 def replace_template_value(template,values):
     for key in values:
         template=re.sub(key,values[key],template)
@@ -75,4 +75,4 @@ with open('./progress-report-template.html','r+', encoding='utf-8') as f:
     html=f.read()
     html=replace_template_value(html,values)
 
-send_blast(_email_list, "Welcome", html, 0)
+send_blast(_email_list, "last changes", html, 0)
